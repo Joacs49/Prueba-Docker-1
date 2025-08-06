@@ -1,23 +1,49 @@
-🚀 Mi primera prueba con Docker
-Este proyecto levanta un contenedor Nginx que muestra una página web simple.
-   
-🐳 Dockerfile
+# 🚀 Mi primera prueba con Docker
 
-dockerfile
+¡Bienvenido a mi primera prueba usando **Docker**!  
+Este proyecto levanta un contenedor con **Nginx** para servir una página web simple.
+
+---
+
+## 📂 Estructura del proyecto
+
+├─ Dockerfile
+└─ pruebas-docker-1/
+└─ index.html
+
+
+- **Dockerfile** → define la imagen personalizada basada en Nginx.  
+- **pruebas-docker-1/** → carpeta que contiene los archivos HTML que servirá el contenedor.
+
+---
+
+## 🐳 Dockerfile
+
+```dockerfile
 FROM nginx:latest
 COPY pruebas-docker-1 /usr/share/nginx/html
+FROM nginx:latest → usa la última imagen oficial de Nginx.
 
-▶️ Cómo usarlo
+COPY pruebas-docker-1 /usr/share/nginx/html → copia los archivos locales al directorio que Nginx sirve por defecto.
+```
+
+## Cómo ejecutar el proyecto
 
 Construir la imagen
 docker build -t mi-prueba-nginx .
 
-Ejecutar el contenedor
+Levantar el contenedor
 docker run -d -p 8080:80 --name mi-nginx mi-prueba-nginx
 
 Abrir en el navegador
 http://localhost:8080
 
-🛑 Detener el contenedor
+¡Y listo! Verás el contenido de tu index.html servido por Nginx. 🎉
+
+🛑 Detener y eliminar el contenedor
+
+Para detener el contenedor:
 docker stop mi-nginx
+
+Para eliminarlo:
 docker rm mi-nginx
