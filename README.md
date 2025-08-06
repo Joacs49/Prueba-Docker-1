@@ -1,14 +1,5 @@
 🚀 Mi primera prueba con Docker
 Este proyecto levanta un contenedor Nginx que muestra una página web simple.
-
-📂 Estructura
-pgsql
-Copiar
-Editar
-.
-├─ Dockerfile
-└─ pruebas-docker-1/
-   └─ index.html
    
 🐳 Dockerfile
 
